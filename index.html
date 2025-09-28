@@ -7,12 +7,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <style>
     body {
-      background-image: src("C:\Users\USER\Desktop\HTML/cat4.jpg") ;
-      background-size: cover;       /* biar menutupi seluruh layar */
-      background-position: center;  /* biar pas di tengah */
-      background-repeat: no-repeat; /* jangan diulang */
+      background-image: url("cat4.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
     }
 
     .ub {
@@ -21,6 +26,15 @@
       font-style: normal;
       font-variation-settings: "wdth" 100;
     }
+
+    .ib{
+        font-family: "Indie Flower", cursive;
+        font-weight: 400;
+        font-style: normal;
+
+
+    }
+
 
     .abc {
       margin: 15px;
@@ -31,13 +45,12 @@
       justify-content: space-between;
       align-items: center;
       gap: 100px;
-      margin: 150px auto 0; /* Tengah layar */
+      margin: 150px auto 0;
       width: fit-content;
       padding: 0 50px;
       box-sizing: border-box;
     }
 
-    /* Atur ukuran dasar gambar di sini */
     .FOTO2 {
       border-radius: 100px;
       height: 150px;
@@ -47,28 +60,47 @@
       cursor: pointer;
     }
 
-    /* Efek hover */
     .FOTO2:hover {
       transform: scale(1.1);
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.7),
                   0 0 40px rgba(0, 255, 255, 0.5);
     }
+
+    /* ✅ Header transparan & tipis */
+    nav {
+      background-color: rgba(9, 49, 110, 0.4);
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: azure;
+      text-decoration: none;
+      font-family: "Inconsolata", monospace;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header> 
-    <nav style="background-color: rgb(9, 49, 110); padding:35px;">
-      <a target="_blank" class="abc ub" style="color: azure; margin-right:15px;">TENTANG KAMI</a>
-      <a target="_blank" class="abc ub" style="margin-right: 15px; color: azure; text-decoration: none;" href="https://discord.com/download">FOTO</a>
-      <a target="_blank" class="abc ub" style="color: azure; text-decoration:none;" href="https://www.bing.com/search?q=mobile+legends">NAMA-NAMA</a>
+    <nav>
+      <a target="_blank" class="abc ub" href="#">TENTANG KAMI</a>
+      <a target="_blank" class="abc ub" href="https://discord.com/download">FOTO</a>
+      <a target="_blank" class="abc ub" href="https://www.bing.com/search?q=mobile+legends">NAMA-NAMA</a>
     </nav>
   </header>
 
   <div class="FOTO">
-    
-    <img class="FOTO2" src="HTML/cat3.jpg" alt="dude">
-    <img class="FOTO2" src="HTML/cat2.jpg" alt="dude">
-    <img class="FOTO2" src="HTML/cat1.jpg" alt="dude">
+    <img class="FOTO2" src="cat3.jpg" alt="dude">
+    <img class="FOTO2" src="cat2.jpg" alt="dude">
+    <img class="FOTO2" src="cat1.jpg" alt="dude">
   </div>
+  <h1 class="ib" style=" text-align: center;"> Projek pertama pembuatan web</h1>
 </body>
 </html>
