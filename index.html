@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-<style>
-body{
-    background-color:black ;
-} 
-.ub{
-  font-family: "Inconsolata", monospace;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-.abc{
-margin:15px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+    }
 
-}
-.FOTO{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 100px;
-    margin: 150px auto 0; /* Tengah layar */
-    width: fit-content;
-    padding: 0 50px;
-    box-sizing: border-box;
-}
-   
-.FOTO2:hover{
-    border-radius: 100px;
-    height: 150px;
-    width : 150px;
-    object-fit: cover;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7),  
-                0 0 40px rgba(0, 255, 255, 0.5);
- 
-   
-}
+    .ub {
+      font-family: "Inconsolata", monospace;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
 
-</style>
+    .abc {
+      margin: 15px;
+    }
+
+    .FOTO {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 100px;
+      margin: 150px auto 0; /* Tengah layar */
+      width: fit-content;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+
+    /* Atur ukuran dasar gambar di sini */
+    .FOTO2 {
+      border-radius: 100px;
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Efek hover */
+    .FOTO2:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.7),
+                  0 0 40px rgba(0, 255, 255, 0.5);
+    }
+  </style>
 </head>
 <body>
-    <header> 
-        <nav style = "background-color: rgb(9, 49, 110); padding:35px;">
-        <a target="_blank" class="abc ub" style="color: azure; margin-right:15px;"> TENTANG KAMI</a>
-        <a target="_blank" class="abc ub" style="margin-right: 15px; color: azure; text-decoration: none;" href="https://discord.com/download"> FOTO KENANGAN</a>
-        <a target="_blank" class="abc ub" style="color: azure; text-decoration:none ;" href="https://www.bing.com/search?q=mobile+legends&pc=GD01&form=GDAVST&ptag=4507"> NAMA-NAMA  </a>
-        </nav>
-    </header>
-  
-    <div class="FOTO">
-        <!-- BELUM DI ISI LINK  DI HREF NYA -->
-         <!-- MASALAH PADA FOTO NYA HILANG -->
-        <img target="_blank" class="FOTO2" href="" src="https://www.motomag.gr/sites/default/files/images/galleries/2020/11/ducati_panigale_v4_sp_2_uc211438_mid.jpg" alt="dude"></img>
-        <img target="_blank" class="FOTO2" href="  " src="https://tse3.mm.bing.net/th/id/OIP.33gJhtj_djZ7kzqp81mIQgHaE8?w=1200&h=800&rs=1&pid=ImgDetMain&o=7&rm=3" alt="dude"></img>
-        <img target="_blank" class="FOTO2" href="  " src="https://tse3.mm.bing.net/th/id/OIP.Im_Bxa1wcYmUkWiOpJ5pQQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"  alt="dude"></img>
-    </div>
+  <header> 
+    <nav style="background-color: rgb(9, 49, 110); padding:35px;">
+      <a target="_blank" class="abc ub" style="color: azure; margin-right:15px;">TENTANG KAMI</a>
+      <a target="_blank" class="abc ub" style="margin-right: 15px; color: azure; text-decoration: none;" href="https://discord.com/download">FOTO KENANGAN</a>
+      <a target="_blank" class="abc ub" style="color: azure; text-decoration:none;" href="https://www.bing.com/search?q=mobile+legends">NAMA-NAMA</a>
+    </nav>
+  </header>
+
+  <div class="FOTO">
+    <img class="FOTO2" src="https://www.motomag.gr/sites/default/files/images/galleries/2020/11/ducati_panigale_v4_sp_2_uc211438_mid.jpg" alt="dude">
+    <img class="FOTO2" src="https://tse3.mm.bing.net/th/id/OIP.33gJhtj_djZ7kzqp81mIQgHaE8?w=1200&h=800&rs=1&pid=ImgDetMain&o=7&rm=3" alt="dude">
+    <img class="FOTO2" src="https://tse3.mm.bing.net/th/id/OIP.Im_Bxa1wcYmUkWiOpJ5pQQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="dude">
+  </div>
 </body>
 </html>
