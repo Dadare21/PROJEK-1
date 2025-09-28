@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projek Pertama</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Indie+Flower&display=swap" rel="stylesheet">
+
   <style>
+    /* 🖼️ Background */
     body {
       background-image: url("cat4.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       margin: 0;
-    }
-
-    .ub {
+      padding: 0;
       font-family: "Inconsolata", monospace;
-      font-optical-sizing: auto;
-      font-style: normal;
-      font-variation-settings: "wdth" 100;
+      color: white;
     }
 
-    .ib{
-        font-family: "Indie Flower", cursive;
-        font-weight: 400;
-        font-style: normal;
-
-
+    /* 🔗 Navigasi */
+    nav {
+      background-color: rgba(9, 49, 110, 0.4);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* biar bisa turun baris di HP */
+      gap: 15px;
+      text-align: center;
     }
 
-
-    .abc {
-      margin: 15px;
+    nav a {
+      color: azure;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
     }
 
+    nav a:hover {
+      color: cyan;
+      text-decoration: underline;
+    }
+
+    /* 📸 Container Gambar */
     .FOTO {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap; /* Biar di HP bisa turun */
+      justify-content: center;
       align-items: center;
-      gap: 100px;
-      margin: 150px auto 0;
-      width: fit-content;
-      padding: 0 50px;
-      box-sizing: border-box;
+      gap: 30px;
+      margin: 80px auto 0;
+      max-width: 800px;
+      width: 90%;
     }
 
     .FOTO2 {
-      border-radius: 100px;
+      border-radius: 50%;
       height: 150px;
       width: 150px;
       object-fit: cover;
@@ -66,41 +71,73 @@
                   0 0 40px rgba(0, 255, 255, 0.5);
     }
 
-    /* ✅ Header transparan & tipis */
-    nav {
-      background-color: rgba(9, 49, 110, 0.4);
-      padding: 10px 20px;
-      display: flex;
-      gap: 20px;
-      align-items: center;
+    /* ✏️ Teks bawah */
+    h1.ib {
+      font-family: "Indie Flower", cursive;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 24px;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+      padding: 0 10px;
     }
 
-    nav a {
-      color: azure;
-      text-decoration: none;
-      font-family: "Inconsolata", monospace;
-      font-size: 14px;
+    /* 📱 Responsif untuk HP */
+    @media (max-width: 768px) {
+      nav {
+        padding: 8px 10px;
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .FOTO {
+        margin-top: 40px;
+        gap: 20px;
+      }
+
+      .FOTO2 {
+        height: 120px;
+        width: 120px;
+      }
+
+      h1.ib {
+        font-size: 20px;
+        margin-top: 30px;
+      }
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    @media (max-width: 480px) {
+      .FOTO2 {
+        height: 100px;
+        width: 100px;
+      }
+
+      h1.ib {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <header> 
+  <!-- 🔝 Header -->
+  <header>
     <nav>
-      <a target="_blank" class="abc ub" href="#">TENTANG KAMI</a>
-      <a target="_blank" class="abc ub" href="https://discord.com/download">FOTO</a>
-      <a target="_blank" class="abc ub" href="https://www.bing.com/search?q=mobile+legends">NAMA-NAMA</a>
+      <a href="#">TENTANG KAMI</a>
+      <a href="https://discord.com/download" target="_blank">FOTO</a>
+      <a href="https://www.bing.com/search?q=mobile+legends" target="_blank">NAMA-NAMA</a>
     </nav>
   </header>
 
+  <!-- 📸 Konten -->
   <div class="FOTO">
-    <img class="FOTO2" src="cat3.jpg" alt="dude">
-    <img class="FOTO2" src="cat2.jpg" alt="dude">
-    <img class="FOTO2" src="cat1.jpg" alt="dude">
+    <img class="FOTO2" src="cat3.jpg" alt="cat3">
+    <img class="FOTO2" src="cat2.jpg" alt="cat2">
+    <img class="FOTO2" src="cat1.jpg" alt="cat1">
   </div>
-  <h1 class="ib" style=" text-align: center;"> Projek pertama pembuatan web</h1>
+
+  <!-- ✏️ Tulisan -->
+  <h1 class="ib">Projek pertama pembuatan web</h1>
 </body>
 </html>
