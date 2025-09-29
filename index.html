@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Indie+Flower&display=swap" rel="stylesheet">
 
   <style>
-    /* 🖼️ Background */
     body {
       background-image: url("cat4.jpg");
       background-size: cover;
@@ -23,31 +22,87 @@
 
     /* 🔗 Navigasi */
     nav {
-      background-color: rgba(9, 49, 110, 0.4);
+      background-color: rgba(12, 15, 20, 0.4);
       padding: 10px 20px;
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    /* kiri: logo */
+    .khusus {
+      position: absolute;
+      left: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      color: rgb(82, 17, 112);
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      letter-spacing: 1px;
+    }
+
+    /* tengah: menu */
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 0 auto;
       justify-content: center;
-      flex-wrap: wrap; /* biar bisa turun baris di HP */
-      gap: 15px;
-      text-align: center;
     }
 
     nav a {
+      position: relative; /* biar pseudo-element nempel di sini */
       color: azure;
       text-decoration: none;
       font-size: 14px;
       transition: 0.3s;
+      padding-bottom: 3px; /* biar ada ruang buat garis */
     }
 
-    nav a:hover {
-      color: cyan;
-      text-decoration: underline;
+    /* ✨ Animasi garis putih */
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0; /* di bawah teks */
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease;
     }
+
+    nav a:hover::after {
+      width: 100%; /* garis jalan dari kiri ke kanan */
+    }
+
+    /* warna khusus */
+    nav a.nama {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(154, 231, 225);
+      text-shadow: 0 0 5px rgba(255, 215, 0, 0.6);
+    }
+
+    nav a.DL {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(111, 169, 255);
+      text-shadow: 0 0 5px rgba(111, 169, 225, 0.7);
+    }
+
+     nav a.DL2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(3, 13, 29);
+      text-shadow: 0 0 5px rgba(111, 169, 225, 0.7);
+    }
+
+
 
     /* 📸 Container Gambar */
     .FOTO {
       display: flex;
-      flex-wrap: wrap; /* Biar di HP bisa turun */
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       gap: 30px;
@@ -71,7 +126,6 @@
                   0 0 40px rgba(0, 255, 255, 0.5);
     }
 
-    /* ✏️ Teks bawah */
     h1.ib {
       font-family: "Indie Flower", cursive;
       text-align: center;
@@ -81,15 +135,20 @@
       padding: 0 10px;
     }
 
-    /* 📱 Responsif untuk HP */
+    /* 📱 Responsif */
     @media (max-width: 768px) {
       nav {
-        padding: 8px 10px;
-        gap: 10px;
+        flex-direction: column;
+        align-items: center;
       }
 
-      nav a {
-        font-size: 13px;
+      .khusus {
+        position: static;
+        margin-bottom: 8px;
+      }
+
+      .menu {
+        margin: 0;
       }
 
       .FOTO {
@@ -121,23 +180,26 @@
   </style>
 </head>
 <body>
-  <!-- 🔝 Header -->
   <header>
     <nav>
-      <a href="https://youtu.be/oaPcRihFodw?si=3oOUiPCHUkL2I6hS" target="_blank">MENU</a>
-      <a href="https://youtu.be/oaPcRihFodw?si=3oOUiPCHUkL2I6hS" target="_blank"> LOKASI </a>
-      <a href="https://youtu.be/oaPcRihFodw?si=3oOUiPCHUkL2I6hS" target="_blank"> PESAN </a>
+      <a class="khusus">TOKO TOSA</a>
+
+      <div class="menu">
+        <a class="nama" href="#">MENU</a>
+        <a class="nama" href="#">ITEM</a>
+        <a class="nama" href="#">DAFTAR BARANG</a>
+        <a class="DL" href="#">BUY BGL.DL.WL</a>
+        <a class="DL2" href="#">SELL BGL.DL.WL</a>
+      </div>
     </nav>
   </header>
 
-  <!-- 📸 Konten -->
   <div class="FOTO">
     <img class="FOTO2" src="cat3.jpg" alt="cat3">
     <img class="FOTO2" src="cat2.jpg" alt="cat2">
     <img class="FOTO2" src="cat1.jpg" alt="cat1">
   </div>
 
-  <!-- ✏️ Tulisan -->
-  <h1 class="ib">Projek pertama pembuatan web</h1>
+  <h1 class="ib">TOKO TOSA</h1>
 </body>
 </html>
